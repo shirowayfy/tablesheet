@@ -23,7 +23,7 @@
 
   & .button__list {
     position: relative;
-    margin: 0 10px;
+    margin: 0 5px;
 
     & .current {
       min-width: 30px;
@@ -33,7 +33,7 @@
       align-items: center;
       border: 2px solid #eee;
       font-size: 18px;
-      font-weight: bold;
+      font-weight: normal;
       text-decoration: underline;
       transition: all .2s;
       border-radius: 5px 5px 0 0;
@@ -80,7 +80,7 @@
 
   & .button__fonts {
     position: relative;
-    margin: 0 10px;
+    margin: 0 5px;
     border-radius: 5px;
 
     & .current {
@@ -90,7 +90,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: bold;
+      font-weight: normal;
       border-radius: 5px;
       border: 2px solid #eee;
 
