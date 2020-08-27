@@ -12,6 +12,8 @@
   align-items: center;
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
+  z-index: 1000;
+  background: #fff;
 
   & .button:first-child {
     margin-left: 0;
