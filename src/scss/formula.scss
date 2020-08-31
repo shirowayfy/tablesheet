@@ -10,8 +10,9 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid $border-color;
-  z-index: 1000;
+  z-index: 150;
   background: #fff;
+  user-select: none;
 
   .info {
     font-size: 18px;

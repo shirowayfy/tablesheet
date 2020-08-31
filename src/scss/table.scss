@@ -14,6 +14,7 @@
     min-height: 20px;
     height: $row-height;
     color: $border-color;
+    user-select: none;
 
   }
 
@@ -21,6 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     min-width: $info-cell-width;
     height: 100%;
     border: 1px solid $border-color;
@@ -36,6 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     background: #f8f9fa;
     min-width: 40px;
     width: $cell-width;
@@ -59,7 +62,40 @@
     &.selected {
       border: none;
       outline: 2px solid #003bff;
-      z-index: 2;
+      z-index: 110;
+    }
+  }
+
+  .col-resize {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 4px;
+
+    &:hover {
+      cursor: col-resize;
+    }
+  }
+
+  .col-resize, .row-resize {
+    position: absolute;
+    background: #003bff;
+    z-index: 120;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1!important;
+    }
+  }
+
+  .row-resize {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+
+    &:hover {
+      cursor: row-resize;
     }
   }
 }
