@@ -19,17 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df82a8a2-9ea9-4388-b7b4-add1a019b996" name="Default Changelist" comment="Finish project config">
-      <change afterPath="$PROJECT_DIR$/src/assets/excel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/dashboard.scss" afterDir="false" />
+    <list default="true" id="df82a8a2-9ea9-4388-b7b4-add1a019b996" name="Default Changelist" comment="Finish Table Resize Logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/formula.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/formula.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/table.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/toolbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/toolbar.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +92,7 @@
       <workItem from="1598187278118" duration="2329000" />
       <workItem from="1598261499378" duration="6476000" />
       <workItem from="1598340692035" duration="3275000" />
+      <workItem from="1598894169544" duration="199000" />
     </task>
     <servers />
   </component>
