@@ -61,6 +61,7 @@
     border-left: none;
     outline: none;
     &.selected {
+      overflow: visible;
       border: none;
       outline: 2px solid #003bff;
       z-index: 110;
