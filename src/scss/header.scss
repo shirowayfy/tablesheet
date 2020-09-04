@@ -48,9 +48,11 @@
       font-size: 28px;
       cursor: pointer;
       transition: all .3s;
+      color: #003bff;
+
 
       &:hover {
-        color: #003bff;
+        transform: scale(1.2);
       }
     }
   }
