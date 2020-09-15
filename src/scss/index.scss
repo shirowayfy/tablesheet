@@ -29,3 +29,37 @@ body {
   max-width: 100%;
   font-size: .8rem;
 }
+
+@media (max-width: 500px) {
+  .excel__header {
+
+    & .header__input {
+      width: 200px;
+      font-size: 20px;
+    }
+
+    & .nav {
+      font-size: 16px;
+      width: 150px;
+
+      & .button {
+        width: 70px;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .excel__header {
+
+    & .header__input {
+      width: 170px;
+      font-size: 16px;
+      margin: 0;
+
+      & i {
+        display: none;
+      }
+    }
+  }
+}
