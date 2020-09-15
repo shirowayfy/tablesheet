@@ -34,8 +34,10 @@ body {
   .excel__header {
 
     & .header__input {
-      width: 200px;
-      font-size: 20px;
+      & input {
+        width: 200px;
+        font-size: 20px;
+      }
     }
 
     & .nav {
