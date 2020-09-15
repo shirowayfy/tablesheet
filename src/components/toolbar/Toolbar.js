@@ -1,81 +1,69 @@
-import {ExcelComponent} from '@core/ExcelComponent';
+import {createToolbar} from '@/components/toolbar/toolbar.template';
+import {$} from '@core/dom';
+import {ExcelStateComponent} from '@core/ExcelStateComponent';
+import {defaultStyles} from '@/constants';
 
-export class Toolbar extends ExcelComponent {
+export class Toolbar extends ExcelStateComponent {
   static className = 'excel__toolbar'
 
   constructor($root, options) {
     super($root, {
       name: 'Toolbar',
       listeners: ['click'],
+      subscribe: ['currentStyles'],
       ...options
     });
+    this.cells = {
+      fontSize: '12',
+      fontFamily: 'Open Sans',
+      sizeList: false,
+      fontList: false
+    }
+  }
+
+  prepare() {
+    this.initState(defaultStyles)
+  }
+  storeChanged(changes) {
+    this.setState(changes.currentStyles)
+  }
+
+  get template() {
+    return createToolbar(this.state)
   }
 
   toHTML() {
-    return `
-      <div class="button">
-                <i class="material-icons">
-                    format_align_left
-                </i>
-            </div>
-
-            <div class="button">
-                <i class="material-icons">
-                    format_align_center
-                </i>
-            </div>
-
-            <div class="button">
-                <i class="material-icons">
-                    format_align_right
-                </i>
-            </div>
-
-            <div class="button">
-                <i class="material-icons">
-                    format_bold
-                </i>
-            </div>
-
-            <div class="button">
-                <i class="material-icons">
-                    format_italic
-                </i>
-            </div>
-
-            <div class="button">
-                <i class="material-icons">
-                    format_underline
-                </i>
-            </div>
-
-            <div class="button__list">
-
-                <div class="current">12</div>
-
-                <ul class="size-list">
-                    <li class="size-list__item">13</li>
-                    <li class="size-list__item">14</li>
-                    <li class="size-list__item">15</li>
-                    <li class="size-list__item">16</li>
-
-                </ul>
-            </div>
-
-            <div class="button__fonts">
-                <div class="current">Roboto</div>
-
-                <ul class="fonts-list">
-                    <li class="fonts-list__item">Ninito</li>
-                    <li class="fonts-list__item">Georgia</li>
-                    <li class="fonts-list__item">Another</li>
-                    <li class="fonts-list__item">Another</li>
-                </ul>
-            </div>
-    `
+    return this.template
   }
 
   onClick(event) {
-    console.log(event.target)
+    const $target = $(event.target)
+    let value
+    if ($target.data.title === 'size') {
+      this.setState({sizeList: true})
+    } else if ($target.data.title === 'font') {
+      this.setState({fontList: true})
+    }
+    if ($target.data.select) {
+      switch ($target.data.select) {
+        case 'font':
+          value = $target.text()
+          this.cells['fontFamily'] = value
+          break
+        case 'size':
+          value = $target.text() + 'px'
+          this.cells['fontSize'] = value
+          break
+      }
+      const res = this.cells
+      const key = Object.keys(res)
+      key.forEach(key => {
+        this.setState({[key]: res[key]})
+      })
+    }
+    if ($target.data.type === 'button') {
+      const value = JSON.parse($target.data.value)
+      this.$emit('toolbar:applyStyle', value)
+    }
   }
 }
