@@ -34,10 +34,11 @@ body {
   .excel__header {
 
     & .header__input {
-      & input {
+      & .input {
         width: 200px;
         font-size: 20px;
       }
+
     }
 
     & .nav {
@@ -57,7 +58,7 @@ body {
     & .header__input {
       width: 170px;
 
-      & input {
+      & .input {
         font-size: 16px;
         margin-left: 0;
       }
