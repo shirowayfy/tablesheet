@@ -53,9 +53,9 @@ body {
   .excel__header {
 
     & .header__input {
+      width: 170px;
 
       & input {
-        width: 170px;
         font-size: 16px;
         margin: 0;
       }
