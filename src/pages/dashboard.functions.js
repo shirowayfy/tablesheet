@@ -13,7 +13,7 @@ function toHTML(key) {
         <span class="material-icons delete"
               data-id="excel:${id}"
               data-type="delete">
-            <cite translate="no">delete</cite>
+            delete
         </span>
     </li>
   `

@@ -70,7 +70,7 @@ function toButton(button) {
   return `
     <div class="button ${button.active ? 'active' : ''}" ${meta}>
         <i class="material-icons" ${meta}>
-            <cite translate="no">${button.icon}</cite>
+            ${button.icon}
         </i>
     </div>
   `
