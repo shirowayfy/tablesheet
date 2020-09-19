@@ -29,7 +29,7 @@ export class Table extends ExcelComponent {
   }
 
   toHTML() {
-    return createTable(100, this.store.getState())
+    return createTable(150, this.store.getState())
   }
 
   init() {
