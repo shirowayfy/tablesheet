@@ -34,8 +34,8 @@ export class Header extends ExcelComponent {
             </div>
 
             <div class="nav">
-                <div class="button" data-button="remove">Delete</div>
-                <div class="button" data-button="exit">Exit</div>
+                <div class="button" data-button="remove">Удалить</div>
+                <div class="button" data-button="exit">Выйти</div>
             </div>
     `
   }
